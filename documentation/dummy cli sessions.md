@@ -1,6 +1,6 @@
 $ python game.py file.save
 
-// reasoning file.save is the savefile that will persisted for the game.
+// reasoning file.save is the savefile that will persist for the game.
 
 Output: No game file found, new game.
 Output: The rules of this game can be found at
