@@ -13,15 +13,13 @@ Output:     http://www.systemreferencedocuments.org/resources/systems/boardgame/
 // start at foyer tile if new game
 
 * Turn loop *
-
   // use Tile info output section.
   
   // if dining room say this:
   
   Output: The door to outside is ${door to outside}.
   
-  * Input loop *
-  
+* Input loop *  
     Input: What do you want to do?
     
     // if the answer to the input is help then use Help message section.
@@ -43,7 +41,8 @@ Output:     http://www.systemreferencedocuments.org/resources/systems/boardgame/
   
   // pick new development card
   Output: You got a development card of ${development card action for time}.
-  
+ 
+* Zombie attack * 
   // if zombies are attacking then:
     Output: Choose option to fight the zombies
     Output: (1) Fight bare handed 1 attack -1 health
@@ -82,7 +81,7 @@ Output:     http://www.systemreferencedocuments.org/resources/systems/boardgame/
   Set item 1 to new item
    
 * Choose tile to go to, previous *
-  Output: You can go in directions: ${door list of previous tiles}.
+ Output: You can go in directions: ${door list of previous tiles}.
   Input: Please select a door to exit from
   
   // if room is valid
@@ -91,7 +90,6 @@ Output:     http://www.systemreferencedocuments.org/resources/systems/boardgame/
     repeat
     
 * Help message *
-
 Output: 
 Output: A direction is left, right, up and down.
 Output: To move out of a door type: move [direction].
@@ -103,6 +101,45 @@ Output:
 Output: To find out the tile's state type: info
 
 * Tile info output *
-
 Output: You are at ${tile name} tile.
 Output: There are doors at ${door list}.
+
+// if room is Evil Temple
+  Input: Spend time to find totem?
+  // if yes,  get a development card of ${development card action for time}.
+    goto Development card action section
+	
+// if room is Storage Room
+	Input: Spend time looking for item?
+	// if yes, get item 
+      goto Item found section
+	  
+// if room is dead end
+  Input: Choose a wall for an attack.
+  Output: 3 Zombies!
+  goto Zombies attack section
+  
+// if room is Kitchen
+  Output: Snack time! Gain 1 health.
+  
+// if Dining Room and go in direction of arrow is chosen
+  Patio tile will be chosen
+  
+// if room is Garden
+  Output: Helpful herbs! Gain 1 health.
+  
+// if room is Graveyard
+  Input: Spend time to bury totem?
+  // if yes,  get a development card of ${development card action for time}.
+    goto Development card action section
+	Output: Congratulation! You Win!
+	
+* Cower *
+// if end of turn
+  Input: Wait & cower for 3 health?
+  
+if health <= 0
+  Output "You have died! Game Over!
+  
+if time == 12:00
+  Output: You have run out of time! Game Over!
