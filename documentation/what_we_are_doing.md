@@ -4,6 +4,7 @@ Everybody does its on doctests.
 Each of us make our own CLI interface handling.
 
 * Claire
+  * Keeps documentation up to date
   * Item
   * DevCard
   * Unit tests:
