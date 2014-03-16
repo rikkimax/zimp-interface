@@ -10,14 +10,42 @@ Each of us make our own CLI interface handling.
   * Unit tests:
     * GameState
     * TileState
+  * Features:
+    * Doctests
+    * Unittests
+    * Can deal with directories and file locations
+    * Breadth of test coverage
+    * Error trapping and handling
+    * Raises exceptions
+    * Supports command-line arguments
+    * has a line orientated interepter baseed on cmd
 * Richard
   * GameState
   * Unit tests:
     * Tile
     * DevCard
+  * Features:
+    * Doctests
+    * Unittests
+    * Can deal with directories and file locations
+    * Breadth of test coverage
+    * Error trapping and handling
+    * Raises exceptions
+    * Supports command-line arguments
+    * has a line orientated interepter baseed on cmd
+    * Serialization
 * Loki
   * TileState
   * Tile
   * Unit tests:
     * GameState
     * Item
+  * Features:
+    * Doctests
+    * Unittests
+    * Can deal with directories and file locations
+    * Breadth of test coverage
+    * Error trapping and handling
+    * Raises exceptions
+    * Supports command-line arguments
+    * has a line orientated interepter baseed on cmd
