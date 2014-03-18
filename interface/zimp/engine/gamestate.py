@@ -74,8 +74,13 @@ class GameState:
         pass
 
     @classmethod
-    def deserialize(cls, file):
+    def deserialize(cls, file, extra_info = None):
         """
         Loads a data structure from the given file.
         """
         pass
+
+
+class ExtraGameInfo:
+    def __init__(self, last_edited):
+        self.last_edited = last_edited
