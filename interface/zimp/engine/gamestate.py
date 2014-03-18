@@ -66,3 +66,16 @@ class GameState:
         Yay its a new turn. Make it happen in ui!
         """
         pass
+
+    def serialize(self, file):
+        """
+        Saves the data structure into the given file.
+        """
+        pass
+
+    @classmethod
+    def deserialize(cls, file):
+        """
+        Loads a data structure from the given file.
+        """
+        pass
