@@ -12,6 +12,12 @@ class GameState:
     health = 0
     has_totem = False
 
+    def setup_new_game(self):
+        """
+        Configures self for a new fresh game.
+        """
+        pass
+
     def spawn_zombies(self, count, direction = Direction.Unknown):
         """
         Spawns {count} zombies in {direction}.
