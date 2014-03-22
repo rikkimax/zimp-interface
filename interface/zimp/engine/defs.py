@@ -3,7 +3,6 @@ __author__ = 'Rikki'
 
 class Direction:
 
-
     Unknown = 1 << 0
     UP = 1 << 1
     DOWN = 1 << 2
