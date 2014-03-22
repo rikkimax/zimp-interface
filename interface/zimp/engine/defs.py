@@ -1,4 +1,8 @@
+__author__ = 'Rikki'
+
+
 class Direction:
+
 
     Unknown = 1 << 0
     UP = 1 << 1
@@ -14,5 +18,13 @@ class Tiles:
     StorageRoom = 3
     Kitchen = 4
     DiningRoom = 5
-    Garden = 6
-    Graveyard = 7
+    FamilyRoom = 6
+    Bedroom = 7
+    Bathroom = 8
+    Garden = 9
+    Graveyard = 10
+    Garage = 11
+    SittingArea = 12
+    Yard1 = 13
+    Yard2 = 14
+    Yard3 = 15
